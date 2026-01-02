@@ -31,3 +31,25 @@ ScrollReveal().reveal(".header__container img", {
     ...scrollRevealOption,
     delay: 1000,
 });
+ScrollReveal().reveal(".range__card", {
+    duration: 1000,
+    interval: 500,
+});
+
+ScrollReveal().reveal(".location__image img", {
+    ...scrollRevealOption,
+    origin: "right",
+});
+ScrollReveal().reveal(".location__content .section__header", {
+    ...scrollRevealOption,
+    delay: 500,
+});
+ScrollReveal().reveal(".location__content p", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
+ScrollReveal().reveal(".location__content .location__btn", {
+    ...scrollRevealOption,
+    delay: 1500,
+});
+
