@@ -313,6 +313,114 @@ nav {
     color: var(--text-light);
 }
 
+.select__container {
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+    background-image: url(assets/select-bg.png);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.select__container .section__header {
+    max-width: 600px;
+    margin-inline: auto;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.swiper {
+    width: 100%;
+    
+}
+.swiper-slide {
+    max-width: 900px;
+}
+.select__card img {
+    max-width: 800px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.5));
+}
+.select__info {
+    max-width: 600px;
+    margin-inline: auto;
+    display: none ;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.select__card.show__info .select__info {
+    display: flex;
+}
+.select__info__card {
+    text-align: center;
+}
+.select__info__card > span{
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 5px 15px;
+    font-size: 2.5rem;
+    background-color: var(--white);
+    border-radius: 100%;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);     
+}
+.select__info__card h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+}
+.select__info__card h4 span {
+    font-size: 0.8rem;
+    margin-inline: auto;
+
+}
+.select__form {
+    max-width: 750px;
+    margin-inline: auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background-color: var(--white);
+    transform: translateY(50%);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.select__price {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-family: var(--header-font);
+    font-weight: 600;
+    color: var(--text-light);
+}
+.select__price span {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: var(--text-dark);
+}
+.select__price span:not(#select-price) {
+    font-weight: 400;
+}
+.select__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.select__btns .btn {
+    min-width: 135px;
+}
+
+.select__btns .btn:nth-child(2) {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+
 
 
 
@@ -400,6 +508,9 @@ nav {
 
     .location__image {
         grid-area: 1/2/2/3;
+    }
+    .select__form {
+        justify-content: space-between;
     }
 }
 

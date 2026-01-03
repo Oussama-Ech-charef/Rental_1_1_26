@@ -53,3 +53,41 @@ ScrollReveal().reveal(".location__content .location__btn", {
     delay: 1500,
 });
 
+
+const selectCards = document.querySelectorAll(".select__card");
+selectCards[0].classList.add("show__info");
+
+const price = ["225", "455", "275", "625", "395"];
+
+const priceEl = document.getElementById("select-price");
+
+function updateSwiperImage(eventName, args) {
+  if (eventName === "slideChangeTransitionStart") {
+    const index = args && args[0].realIndex;
+    priceEl.innerText = price[index];
+    selectCards.forEach((item) => {
+      item.classList.remove("show__info");
+    });
+    selectCards[index].classList.add("show__info");
+  }
+}
+
+const swiper = new Swiper(".swiper", {
+  loop: true,
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+    depth: 500,
+    modifier: 1,
+    scale: 0.75,
+    slideShadows: false,
+    stretch: -100,
+  },
+
+  onAny(event, ...args) {
+    updateSwiperImage(event, args);
+  },
+});
