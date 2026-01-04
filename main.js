@@ -91,3 +91,33 @@ const swiper = new Swiper(".swiper", {
     updateSwiperImage(event, args);
   },
 });
+
+
+ScrollReveal().reveal(".story__card", {
+    ...scrollRevealOption,
+    interval: 500,
+});
+
+const banner = document.querySelector(".banner__wrapper");
+
+const bannerContent = Array.from(banner.children);
+
+bannerContent.forEach((item) => {
+  const duplicateNode = item.cloneNode(true);
+  duplicateNode.setAttribute("aria-hidden", true);
+  banner.appendChild(duplicateNode);
+});
+
+
+ScrollReveal().reveal(".download__image img", {
+    ...scrollRevealOption,
+    origin: "right",
+});
+ScrollReveal().reveal(".download__content .section__header", {
+    ...scrollRevealOption,
+    delay: 500,
+});
+ScrollReveal().reveal(".download__links", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
